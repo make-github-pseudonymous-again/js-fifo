@@ -13,7 +13,7 @@
 	"main": "js/dist/fifo.js",
 	"description": "First in, first out data structures code bricks for JavaScript",
 	"name": "aureooms-js-fifo",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"devDependencies": {
 		"aureooms-node-package": "^4.1.0"
 	},

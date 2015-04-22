@@ -13,7 +13,7 @@
 	"description": "First in, first out data structures code bricks for JavaScript",
 	"license": "AGPL-3.0",
 	"main": "js/dist/fifo.js",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"name": "aureooms-js-fifo",
 	"homepage": "http://aureooms.github.io/js-fifo/"
 }
