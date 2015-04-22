@@ -1,20 +1,3 @@
-(function(exports, undefined){
-
-	'use strict';
-
-
-/* js/src/Node.js */
-
-var Node = function ( value , next ) {
-
-	this.value = value ;
-	this.next = next ;
-
-} ;
-
-exports.Node = Node ;
-
-/* js/src/NodeQueue.js */
 
 /**
  * NodeQueue#peek only valid if NodeQueue#empty is false.
@@ -69,5 +52,3 @@ NodeQueue.prototype.shift = function ( ) {
 } ;
 
 exports.NodeQueue = NodeQueue ;
-
-})(typeof exports === 'undefined' ? this['fifo'] = {} : exports);
