@@ -33,11 +33,31 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
-        "sourcePath": "/home/aureooms/dev/js/js-fifo/js/src/dummy.js",
-        "projectPath": "js/src/dummy.js",
-        "targetPath": "dummy",
-        "pageTitle": "dummy",
-        "title": "dummy"
+        "sourcePath": "/home/aureooms/dev/js/js-fifo/js/src/Node.js",
+        "projectPath": "js/src/Node.js",
+        "targetPath": "Node",
+        "pageTitle": "Node",
+        "title": "Node"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-fifo/js/src/NodeQueue.js",
+        "projectPath": "js/src/NodeQueue.js",
+        "targetPath": "NodeQueue",
+        "pageTitle": "NodeQueue",
+        "title": "NodeQueue"
       },
       "depth": 1,
       "outline": []
