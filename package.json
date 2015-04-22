@@ -1,0 +1,33 @@
+{
+	"keywords": [
+		"bricks",
+		"deque",
+		"fifo",
+		"javascript",
+		"js",
+		"queue"
+	],
+	"bugs": {
+		"url": "https://github.com/aureooms/js-fifo/issues"
+	},
+	"main": "js/dist/fifo.js",
+	"description": "First in, first out data structures code bricks for JavaScript",
+	"name": "aureooms-js-fifo",
+	"version": "0.0.0",
+	"devDependencies": {
+		"aureooms-node-package": "^4.1.0"
+	},
+	"dependencies": {},
+	"license": "AGPL-3.0",
+	"scripts": {
+		"test": "./node_modules/.bin/aureooms-node-package-test",
+		"build": "./node_modules/.bin/aureooms-node-package-build",
+		"doc": "./node_modules/.bin/groc"
+	},
+	"author": "aureooms",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aureooms/js-fifo.git"
+	},
+	"homepage": "http://aureooms.github.io/js-fifo/"
+}

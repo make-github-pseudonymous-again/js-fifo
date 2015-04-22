@@ -1,0 +1,17 @@
+{
+	"code": {
+		"test": [
+			"test",
+			"js"
+		],
+		"main": [
+			"js",
+			"dist",
+			"fifo.js"
+		]
+	},
+	"name": "fifo",
+	"debug": false,
+	"src": "js/src/",
+	"out": "js/dist/"
+}

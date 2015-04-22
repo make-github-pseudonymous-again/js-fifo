@@ -1,0 +1,11 @@
+{
+	"version": "0.0.0",
+	"repo": "aureooms/js-fifo",
+	"license": "AGPL-3.0",
+	"scripts": [
+		"js/dist/fifo.js"
+	],
+	"main": "js/dist/fifo.js",
+	"description": "First in, first out data structures code bricks for JavaScript",
+	"name": "aureooms-js-fifo"
+}

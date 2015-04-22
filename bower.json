@@ -1,0 +1,19 @@
+{
+	"ignore": [
+		"js/index.js",
+		"js/src",
+		"test",
+		"pkg.json",
+		"package.json",
+		".groc.json",
+		".travis.yml",
+		".gitignore",
+		"README.md"
+	],
+	"description": "First in, first out data structures code bricks for JavaScript",
+	"license": "AGPL-3.0",
+	"main": "js/dist/fifo.js",
+	"version": "0.0.0",
+	"name": "aureooms-js-fifo",
+	"homepage": "http://aureooms.github.io/js-fifo/"
+}
