@@ -33,6 +33,46 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
+        "sourcePath": "/home/aureooms/dev/js/js-fifo/js/src/DllNode.js",
+        "projectPath": "js/src/DllNode.js",
+        "targetPath": "DllNode",
+        "pageTitle": "DllNode",
+        "title": "DllNode"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-fifo/js/src/DllQueue.js",
+        "projectPath": "js/src/DllQueue.js",
+        "targetPath": "DllQueue",
+        "pageTitle": "DllQueue",
+        "title": "DllQueue"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
         "sourcePath": "/home/aureooms/dev/js/js-fifo/js/src/Node.js",
         "projectPath": "js/src/Node.js",
         "targetPath": "Node",
