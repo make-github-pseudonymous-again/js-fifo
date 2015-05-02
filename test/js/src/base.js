@@ -46,3 +46,4 @@ var n = 2500 ;
 
 t( "NodeQueue" , new fifo.NodeQueue( ) , n ) ;
 t( "DllQueue" , new fifo.DllQueue( ) , n ) ;
+t( "IfQueue" , new fifo.IfQueue( ) , n ) ;

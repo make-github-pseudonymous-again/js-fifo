@@ -15,7 +15,7 @@
 	"name": "aureooms-js-fifo",
 	"version": "1.0.0",
 	"devDependencies": {
-		"aureooms-node-package": "^4.1.0"
+		"aureooms-node-package": "^4.2.3"
 	},
 	"dependencies": {},
 	"license": "AGPL-3.0",
