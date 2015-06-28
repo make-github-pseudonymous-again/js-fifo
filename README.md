@@ -16,8 +16,6 @@ _**F**irst **I**n, **F**irst **O**ut_ data structures code bricks for JavaScript
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/js-fifo.svg?style=flat)](https://github.com/aureooms/js-fifo/issues)
 [![Inline docs](http://inch-ci.org/github/aureooms/js-fifo.svg?branch=master&style=shields)](http://inch-ci.org/github/aureooms/js-fifo)
 
-##Installation
-
 Can be managed through [duo](https://github.com/duojs/duo),
 [component](https://github.com/componentjs/component),
 [bower](https://github.com/bower/bower), or
@@ -27,7 +25,7 @@ Can be managed through [duo](https://github.com/duojs/duo),
 let fifo = require( "aureooms-js-fifo" ) ;
 ```
 
-##Usage
+##Use
 
 All data structures implemented in this package follow the following interface,
 
