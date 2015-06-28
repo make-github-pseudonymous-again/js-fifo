@@ -1,7 +1,8 @@
 [js-fifo](http://aureooms.github.io/js-fifo)
 ==
 
-_**F**irst **I**n, **F**irst **O**ut_ data structures code bricks for JavaScript.
+_**F**irst **I**n, **F**irst **O**ut_ data structures code bricks for JavaScript. Parent is
+[aureooms/js-data-structures](https://github.com/aureooms/js-data-structures).
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-fifo.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-fifo/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-js-fifo.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-fifo)
