@@ -1,6 +1,6 @@
 {
   "name": "aureooms-js-fifo",
-  "description": "First in, first out data structures code bricks for JavaScript",
+  "description": "First in, first out data structures for JavaScript",
   "version": "2.0.0",
   "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
   "ava": {
