@@ -1,15 +1,16 @@
+import Node from './Node' ;
 
 /**
  * NodeQueue#peek only valid if NodeQueue#empty is false.
  * NodeQueue#shift only valid if NodeQueue#empty is false.
  */
 
-var NodeQueue = function ( ) {
+export default function NodeQueue ( ) {
 
 	this.front = new Node( null , null ) ;
 	this.back = this.front ;
 
-} ;
+}
 
 NodeQueue.prototype.empty = function ( ) {
 
@@ -39,9 +40,7 @@ NodeQueue.prototype.push = function ( value ) {
 
 NodeQueue.prototype.shift = function ( ) {
 
-	var node ;
-
-	node = this.front.next ;
+	const node = this.front.next ;
 
 	this.front.next = node.next ;
 
@@ -50,5 +49,3 @@ NodeQueue.prototype.shift = function ( ) {
 	return node.value ;
 
 } ;
-
-exports.NodeQueue = NodeQueue ;

@@ -1,16 +1,17 @@
+import DllNode from './DllNode' ;
 
 /**
  * DllQueue#peek only valid if DllQueue#empty is false.
  * DllQueue#shift only valid if DllQueue#empty is false.
  */
 
-var DllQueue = function ( ) {
+export default function DllQueue ( ) {
 
 	this.front = new DllNode( null , null , null ) ;
 	this.back = new DllNode( this.front , null , null ) ;
 	this.front.next = this.back ;
 
-} ;
+}
 
 DllQueue.prototype.empty = function ( ) {
 
@@ -30,9 +31,7 @@ DllQueue.prototype.peek = function ( ) {
 
 DllQueue.prototype.push = function ( value ) {
 
-	var node ;
-
-	node = new DllNode( this.back.prev , this.back , value ) ;
+	const node = new DllNode( this.back.prev , this.back , value ) ;
 
 	this.back.prev = node.prev.next = node ;
 
@@ -44,9 +43,7 @@ DllQueue.prototype.push = function ( value ) {
 
 DllQueue.prototype.shift = function ( ) {
 
-	var node ;
-
-	node = this.front.next ;
+	const node = this.front.next ;
 
 	this.front.next = node.next ;
 
@@ -55,5 +52,3 @@ DllQueue.prototype.shift = function ( ) {
 	return node.value ;
 
 } ;
-
-exports.DllQueue = DllQueue ;

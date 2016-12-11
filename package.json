@@ -1,33 +1,61 @@
 {
-	"keywords": [
-		"bricks",
-		"deque",
-		"fifo",
-		"javascript",
-		"js",
-		"queue"
-	],
-	"bugs": {
-		"url": "https://github.com/aureooms/js-fifo/issues"
-	},
-	"main": "js/dist/fifo.js",
-	"description": "First in, first out data structures code bricks for JavaScript",
-	"name": "aureooms-js-fifo",
-	"version": "1.1.0",
-	"devDependencies": {
-		"aureooms-node-package": "^6.0.1"
-	},
-	"dependencies": {},
-	"license": "AGPL-3.0",
-	"scripts": {
-		"test": "./node_modules/.bin/aureooms-node-package-test",
-		"build": "./node_modules/.bin/aureooms-node-package-build",
-		"doc": "./node_modules/.bin/groc"
-	},
-	"author": "aureooms",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/aureooms/js-fifo.git"
-	},
-	"homepage": "http://aureooms.github.io/js-fifo/"
+  "name": "aureooms-js-fifo",
+  "description": "First in, first out data structures code bricks for JavaScript",
+  "version": "1.1.0",
+  "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
+  "ava": {
+    "require": [
+      "babel-polyfill",
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ],
+    "env": {
+      "development": {
+        "sourceMaps": "inline"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/aureooms/js-fifo/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "aureooms-js-array": "^3.1.0",
+    "aureooms-js-functools": "^2.0.3",
+    "aureooms-js-itertools": "^3.1.1",
+    "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-latest": "^6.16.0",
+    "codeclimate-test-reporter": "^0.4.0",
+    "coveralls": "^2.11.15",
+    "esdoc": "^0.4.8",
+    "nyc": "^10.0.0"
+  },
+  "homepage": "https://aureooms.github.io/js-fifo",
+  "keywords": [
+    "data",
+    "deque",
+    "fifo",
+    "javascript",
+    "js",
+    "queue",
+    "structures"
+  ],
+  "license": "AGPL-3.0",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aureooms/js-fifo.git"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "cover": "nyc --reporter=lcov npm test",
+    "prepublish": "npm run build",
+    "test": "ava ./test/src --concurrency 8"
+  }
 }

@@ -1,15 +1,16 @@
+import Node from './Node' ;
 
 /**
  * IfQueue#peek only valid if IfQueue#empty is false.
  * IfQueue#shift only valid if IfQueue#empty is false.
  */
 
-var IfQueue = function ( ) {
+export default function IfQueue ( ) {
 
 	this.front = null ;
 	this.back = null ;
 
-} ;
+}
 
 IfQueue.prototype.empty = function ( ) {
 
@@ -49,9 +50,7 @@ IfQueue.prototype.push = function ( value ) {
 
 IfQueue.prototype.shift = function ( ) {
 
-	var node ;
-
-	node = this.front ;
+	const node = this.front ;
 
 	this.front = node.next ;
 
@@ -62,5 +61,3 @@ IfQueue.prototype.shift = function ( ) {
 	return node.value ;
 
 } ;
-
-exports.IfQueue = IfQueue ;
