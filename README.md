@@ -1,7 +1,7 @@
 [@aureooms/js-fifo](https://aureooms.github.io/js-fifo)
 ==
 
-<img src="https://cdn.rawgit.com/aureooms/js-fingertree/master/media/sketch.svg" width="864">
+<img src="https://cdn.rawgit.com/aureooms/js-fifo/master/media/sketch.svg" width="864">
 
 First In, First Out data structures for JavaScript.
 See [docs](https://aureooms.github.io/js-fifo).
