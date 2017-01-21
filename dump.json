@@ -2,23 +2,22 @@
   {
     "__docId__": 0,
     "kind": "file",
-    "static": true,
-    "variation": null,
     "name": "src/DllNode.js",
-    "memberof": null,
+    "content": "\nexport default function DllNode ( prev , next , value ) {\n\n\tthis.prev = prev ;\n\tthis.next = next ;\n\tthis.value = value ;\n\n}\n",
+    "static": true,
     "longname": "src/DllNode.js",
     "access": null,
     "description": null,
-    "lineNumber": 2,
-    "content": "\nexport default function DllNode ( prev , next , value ) {\n\n\tthis.prev = prev ;\n\tthis.next = next ;\n\tthis.value = value ;\n\n}\n"
+    "lineNumber": 1
   },
   {
     "__docId__": 1,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "DllNode",
     "memberof": "src/DllNode.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/DllNode.js~DllNode",
     "access": null,
     "export": true,
@@ -27,6 +26,12 @@
     "description": null,
     "lineNumber": 2,
     "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "params": [
       {
         "name": "prev",
@@ -46,29 +51,27 @@
           "*"
         ]
       }
-    ],
-    "generator": false
+    ]
   },
   {
     "__docId__": 2,
     "kind": "file",
-    "static": true,
-    "variation": null,
     "name": "src/DllQueue.js",
-    "memberof": null,
+    "content": "import DllNode from './DllNode' ;\n\n/**\n * DllQueue#peek only valid if DllQueue#empty is false.\n * DllQueue#shift only valid if DllQueue#empty is false.\n */\n\nexport default function DllQueue ( ) {\n\n\tthis.front = new DllNode( null , null , null ) ;\n\tthis.back = new DllNode( this.front , null , null ) ;\n\tthis.front.next = this.back ;\n\n}\n\nDllQueue.prototype.empty = function ( ) {\n\n\treturn this.front.next === this.back ;\n\n} ;\n\n/**\n * Only valid if DllQueue#empty is false.\n */\n\nDllQueue.prototype.peek = function ( ) {\n\n\treturn this.front.next.value ;\n\n} ;\n\nDllQueue.prototype.push = function ( value ) {\n\n\tconst node = new DllNode( this.back.prev , this.back , value ) ;\n\n\tthis.back.prev = node.prev.next = node ;\n\n} ;\n\n/**\n * Only valid if DllQueue#empty is false.\n */\n\nDllQueue.prototype.shift = function ( ) {\n\n\tconst node = this.front.next ;\n\n\tthis.front.next = node.next ;\n\n\tnode.next.prev = this.front ;\n\n\treturn node.value ;\n\n} ;\n",
+    "static": true,
     "longname": "src/DllQueue.js",
     "access": null,
     "description": null,
-    "lineNumber": 1,
-    "content": "import DllNode from './DllNode' ;\n\n/**\n * DllQueue#peek only valid if DllQueue#empty is false.\n * DllQueue#shift only valid if DllQueue#empty is false.\n */\n\nexport default function DllQueue ( ) {\n\n\tthis.front = new DllNode( null , null , null ) ;\n\tthis.back = new DllNode( this.front , null , null ) ;\n\tthis.front.next = this.back ;\n\n}\n\nDllQueue.prototype.empty = function ( ) {\n\n\treturn this.front.next === this.back ;\n\n} ;\n\n/**\n * Only valid if DllQueue#empty is false.\n */\n\nDllQueue.prototype.peek = function ( ) {\n\n\treturn this.front.next.value ;\n\n} ;\n\nDllQueue.prototype.push = function ( value ) {\n\n\tconst node = new DllNode( this.back.prev , this.back , value ) ;\n\n\tthis.back.prev = node.prev.next = node ;\n\n} ;\n\n/**\n * Only valid if DllQueue#empty is false.\n */\n\nDllQueue.prototype.shift = function ( ) {\n\n\tconst node = this.front.next ;\n\n\tthis.front.next = node.next ;\n\n\tnode.next.prev = this.front ;\n\n\treturn node.value ;\n\n} ;\n"
+    "lineNumber": 1
   },
   {
     "__docId__": 3,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "DllQueue",
     "memberof": "src/DllQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/DllQueue.js~DllQueue",
     "access": null,
     "export": true,
@@ -76,16 +79,16 @@
     "importStyle": "DllQueue",
     "description": "DllQueue#peek only valid if DllQueue#empty is false.\nDllQueue#shift only valid if DllQueue#empty is false.",
     "lineNumber": 8,
-    "params": [],
-    "generator": false
+    "params": []
   },
   {
     "__docId__": 4,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "empty",
     "memberof": "src/DllQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/DllQueue.js~empty",
     "access": null,
     "export": false,
@@ -94,21 +97,27 @@
     "description": null,
     "lineNumber": 16,
     "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "params": [],
     "return": {
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
     "__docId__": 5,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "peek",
     "memberof": "src/DllQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/DllQueue.js~peek",
     "access": null,
     "export": false,
@@ -121,16 +130,16 @@
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
     "__docId__": 6,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "push",
     "memberof": "src/DllQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/DllQueue.js~push",
     "access": null,
     "export": false,
@@ -139,6 +148,12 @@
     "description": null,
     "lineNumber": 32,
     "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "params": [
       {
         "name": "value",
@@ -146,16 +161,16 @@
           "*"
         ]
       }
-    ],
-    "generator": false
+    ]
   },
   {
     "__docId__": 7,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "shift",
     "memberof": "src/DllQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/DllQueue.js~shift",
     "access": null,
     "export": false,
@@ -168,29 +183,27 @@
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
     "__docId__": 8,
     "kind": "file",
-    "static": true,
-    "variation": null,
     "name": "src/IfQueue.js",
-    "memberof": null,
+    "content": "import Node from './Node' ;\n\n/**\n * IfQueue#peek only valid if IfQueue#empty is false.\n * IfQueue#shift only valid if IfQueue#empty is false.\n */\n\nexport default function IfQueue ( ) {\n\n\tthis.front = null ;\n\tthis.back = null ;\n\n}\n\nIfQueue.prototype.empty = function ( ) {\n\n\treturn this.front === null ;\n\n} ;\n\n/**\n * Only valid if IfQueue#empty is false.\n */\n\nIfQueue.prototype.peek = function ( ) {\n\n\treturn this.front.value ;\n\n} ;\n\nIfQueue.prototype.push = function ( value ) {\n\n\tif ( this.front === null ) {\n\n\t\tthis.front = this.back = new Node( value , null ) ;\n\n\t}\n\n\telse {\n\n\t\tthis.back = this.back.next = new Node( value , null ) ;\n\n\t}\n\n} ;\n\n/**\n * Only valid if IfQueue#empty is false.\n */\n\nIfQueue.prototype.shift = function ( ) {\n\n\tconst node = this.front ;\n\n\tthis.front = node.next ;\n\n\t// necessary for garbage collector\n\n\tif ( this.back === node ) this.back = null ;\n\n\treturn node.value ;\n\n} ;\n",
+    "static": true,
     "longname": "src/IfQueue.js",
     "access": null,
     "description": null,
-    "lineNumber": 1,
-    "content": "import Node from './Node' ;\n\n/**\n * IfQueue#peek only valid if IfQueue#empty is false.\n * IfQueue#shift only valid if IfQueue#empty is false.\n */\n\nexport default function IfQueue ( ) {\n\n\tthis.front = null ;\n\tthis.back = null ;\n\n}\n\nIfQueue.prototype.empty = function ( ) {\n\n\treturn this.front === null ;\n\n} ;\n\n/**\n * Only valid if IfQueue#empty is false.\n */\n\nIfQueue.prototype.peek = function ( ) {\n\n\treturn this.front.value ;\n\n} ;\n\nIfQueue.prototype.push = function ( value ) {\n\n\tif ( this.front === null ) {\n\n\t\tthis.front = this.back = new Node( value , null ) ;\n\n\t}\n\n\telse {\n\n\t\tthis.back = this.back.next = new Node( value , null ) ;\n\n\t}\n\n} ;\n\n/**\n * Only valid if IfQueue#empty is false.\n */\n\nIfQueue.prototype.shift = function ( ) {\n\n\tconst node = this.front ;\n\n\tthis.front = node.next ;\n\n\t// necessary for garbage collector\n\n\tif ( this.back === node ) this.back = null ;\n\n\treturn node.value ;\n\n} ;\n"
+    "lineNumber": 1
   },
   {
     "__docId__": 9,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "IfQueue",
     "memberof": "src/IfQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/IfQueue.js~IfQueue",
     "access": null,
     "export": true,
@@ -198,16 +211,16 @@
     "importStyle": "IfQueue",
     "description": "IfQueue#peek only valid if IfQueue#empty is false.\nIfQueue#shift only valid if IfQueue#empty is false.",
     "lineNumber": 8,
-    "params": [],
-    "generator": false
+    "params": []
   },
   {
     "__docId__": 10,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "empty",
     "memberof": "src/IfQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/IfQueue.js~empty",
     "access": null,
     "export": false,
@@ -216,21 +229,27 @@
     "description": null,
     "lineNumber": 15,
     "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "params": [],
     "return": {
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
     "__docId__": 11,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "peek",
     "memberof": "src/IfQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/IfQueue.js~peek",
     "access": null,
     "export": false,
@@ -243,16 +262,16 @@
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
     "__docId__": 12,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "push",
     "memberof": "src/IfQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/IfQueue.js~push",
     "access": null,
     "export": false,
@@ -261,6 +280,12 @@
     "description": null,
     "lineNumber": 31,
     "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "params": [
       {
         "name": "value",
@@ -268,16 +293,16 @@
           "*"
         ]
       }
-    ],
-    "generator": false
+    ]
   },
   {
     "__docId__": 13,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "shift",
     "memberof": "src/IfQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/IfQueue.js~shift",
     "access": null,
     "export": false,
@@ -290,29 +315,27 @@
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
     "__docId__": 14,
     "kind": "file",
-    "static": true,
-    "variation": null,
     "name": "src/Node.js",
-    "memberof": null,
+    "content": "\nexport default function Node ( value , next ) {\n\n\tthis.value = value ;\n\tthis.next = next ;\n\n}\n",
+    "static": true,
     "longname": "src/Node.js",
     "access": null,
     "description": null,
-    "lineNumber": 2,
-    "content": "\nexport default function Node ( value , next ) {\n\n\tthis.value = value ;\n\tthis.next = next ;\n\n}\n"
+    "lineNumber": 1
   },
   {
     "__docId__": 15,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "Node",
     "memberof": "src/Node.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/Node.js~Node",
     "access": null,
     "export": true,
@@ -321,6 +344,12 @@
     "description": null,
     "lineNumber": 2,
     "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "params": [
       {
         "name": "value",
@@ -334,29 +363,27 @@
           "*"
         ]
       }
-    ],
-    "generator": false
+    ]
   },
   {
     "__docId__": 16,
     "kind": "file",
-    "static": true,
-    "variation": null,
     "name": "src/NodeQueue.js",
-    "memberof": null,
+    "content": "import Node from './Node' ;\n\n/**\n * NodeQueue#peek only valid if NodeQueue#empty is false.\n * NodeQueue#shift only valid if NodeQueue#empty is false.\n */\n\nexport default function NodeQueue ( ) {\n\n\tthis.front = new Node( null , null ) ;\n\tthis.back = this.front ;\n\n}\n\nNodeQueue.prototype.empty = function ( ) {\n\n\treturn this.front === this.back ;\n\n} ;\n\n/**\n * Only valid if NodeQueue#empty is false.\n */\n\nNodeQueue.prototype.peek = function ( ) {\n\n\treturn this.front.next.value ;\n\n} ;\n\nNodeQueue.prototype.push = function ( value ) {\n\n\tthis.back = this.back.next = new Node( value , null ) ;\n\n} ;\n\n/**\n * Only valid if NodeQueue#empty is false.\n */\n\nNodeQueue.prototype.shift = function ( ) {\n\n\tconst node = this.front.next ;\n\n\tthis.front.next = node.next ;\n\n\tif ( this.back === node ) this.back = this.front ;\n\n\treturn node.value ;\n\n} ;\n",
+    "static": true,
     "longname": "src/NodeQueue.js",
     "access": null,
     "description": null,
-    "lineNumber": 1,
-    "content": "import Node from './Node' ;\n\n/**\n * NodeQueue#peek only valid if NodeQueue#empty is false.\n * NodeQueue#shift only valid if NodeQueue#empty is false.\n */\n\nexport default function NodeQueue ( ) {\n\n\tthis.front = new Node( null , null ) ;\n\tthis.back = this.front ;\n\n}\n\nNodeQueue.prototype.empty = function ( ) {\n\n\treturn this.front === this.back ;\n\n} ;\n\n/**\n * Only valid if NodeQueue#empty is false.\n */\n\nNodeQueue.prototype.peek = function ( ) {\n\n\treturn this.front.next.value ;\n\n} ;\n\nNodeQueue.prototype.push = function ( value ) {\n\n\tthis.back = this.back.next = new Node( value , null ) ;\n\n} ;\n\n/**\n * Only valid if NodeQueue#empty is false.\n */\n\nNodeQueue.prototype.shift = function ( ) {\n\n\tconst node = this.front.next ;\n\n\tthis.front.next = node.next ;\n\n\tif ( this.back === node ) this.back = this.front ;\n\n\treturn node.value ;\n\n} ;\n"
+    "lineNumber": 1
   },
   {
     "__docId__": 17,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "NodeQueue",
     "memberof": "src/NodeQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/NodeQueue.js~NodeQueue",
     "access": null,
     "export": true,
@@ -364,16 +391,16 @@
     "importStyle": "NodeQueue",
     "description": "NodeQueue#peek only valid if NodeQueue#empty is false.\nNodeQueue#shift only valid if NodeQueue#empty is false.",
     "lineNumber": 8,
-    "params": [],
-    "generator": false
+    "params": []
   },
   {
     "__docId__": 18,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "empty",
     "memberof": "src/NodeQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/NodeQueue.js~empty",
     "access": null,
     "export": false,
@@ -382,21 +409,27 @@
     "description": null,
     "lineNumber": 15,
     "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "params": [],
     "return": {
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
     "__docId__": 19,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "peek",
     "memberof": "src/NodeQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/NodeQueue.js~peek",
     "access": null,
     "export": false,
@@ -409,16 +442,16 @@
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
     "__docId__": 20,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "push",
     "memberof": "src/NodeQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/NodeQueue.js~push",
     "access": null,
     "export": false,
@@ -427,6 +460,12 @@
     "description": null,
     "lineNumber": 31,
     "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "params": [
       {
         "name": "value",
@@ -434,16 +473,16 @@
           "*"
         ]
       }
-    ],
-    "generator": false
+    ]
   },
   {
     "__docId__": 21,
     "kind": "function",
-    "static": true,
-    "variation": null,
     "name": "shift",
     "memberof": "src/NodeQueue.js",
+    "generator": false,
+    "async": false,
+    "static": true,
     "longname": "src/NodeQueue.js~shift",
     "access": null,
     "export": false,
@@ -456,31 +495,27 @@
       "types": [
         "*"
       ]
-    },
-    "generator": false
+    }
   },
   {
-    "__docId__": 23,
-    "kind": "external",
+    "__docId__": 22,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import DllNode from './DllNode' ;\nimport DllQueue from './DllQueue' ;\nimport IfQueue from './IfQueue' ;\nimport Node from './Node' ;\nimport NodeQueue from './NodeQueue' ;\n\nexport default {\n\tDllNode ,\n\tDllQueue ,\n\tIfQueue ,\n\tNode ,\n\tNodeQueue ,\n} ;\n\nexport {\n\tDllNode ,\n\tDllQueue ,\n\tIfQueue ,\n\tNode ,\n\tNodeQueue ,\n} ;\n",
     "static": true,
-    "variation": null,
-    "name": "Infinity",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
-    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "longname": "src/index.js",
     "access": null,
-    "description": "",
-    "builtinExternal": true
+    "description": null,
+    "lineNumber": 1
   },
   {
     "__docId__": 24,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "NaN",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -488,12 +523,11 @@
   {
     "__docId__": 25,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "undefined",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -501,12 +535,11 @@
   {
     "__docId__": 26,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "null",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -514,12 +547,11 @@
   {
     "__docId__": 27,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Object",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -527,12 +559,11 @@
   {
     "__docId__": 28,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "object",
+    "name": "Object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -540,12 +571,11 @@
   {
     "__docId__": 29,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Function",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -553,12 +583,11 @@
   {
     "__docId__": 30,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "function",
+    "name": "Function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -566,12 +595,11 @@
   {
     "__docId__": 31,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Boolean",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -579,12 +607,11 @@
   {
     "__docId__": 32,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "boolean",
+    "name": "Boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -592,12 +619,11 @@
   {
     "__docId__": 33,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Symbol",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -605,12 +631,11 @@
   {
     "__docId__": 34,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Error",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -618,12 +643,11 @@
   {
     "__docId__": 35,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "EvalError",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -631,12 +655,11 @@
   {
     "__docId__": 36,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "InternalError",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -644,12 +667,11 @@
   {
     "__docId__": 37,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "RangeError",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -657,12 +679,11 @@
   {
     "__docId__": 38,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "ReferenceError",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -670,12 +691,11 @@
   {
     "__docId__": 39,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "SyntaxError",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -683,12 +703,11 @@
   {
     "__docId__": 40,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "TypeError",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -696,12 +715,11 @@
   {
     "__docId__": 41,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "URIError",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -709,12 +727,11 @@
   {
     "__docId__": 42,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Number",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -722,12 +739,11 @@
   {
     "__docId__": 43,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "number",
+    "name": "Number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -735,12 +751,11 @@
   {
     "__docId__": 44,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Date",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -748,12 +763,11 @@
   {
     "__docId__": 45,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "String",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -761,12 +775,11 @@
   {
     "__docId__": 46,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "string",
+    "name": "String",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -774,12 +787,11 @@
   {
     "__docId__": 47,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "RegExp",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -787,12 +799,11 @@
   {
     "__docId__": 48,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -800,12 +811,11 @@
   {
     "__docId__": 49,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Int8Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -813,12 +823,11 @@
   {
     "__docId__": 50,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Uint8Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -826,12 +835,11 @@
   {
     "__docId__": 51,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Uint8ClampedArray",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -839,12 +847,11 @@
   {
     "__docId__": 52,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Int16Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -852,12 +859,11 @@
   {
     "__docId__": 53,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Uint16Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -865,12 +871,11 @@
   {
     "__docId__": 54,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Int32Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -878,12 +883,11 @@
   {
     "__docId__": 55,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Uint32Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -891,12 +895,11 @@
   {
     "__docId__": 56,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Float32Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -904,12 +907,11 @@
   {
     "__docId__": 57,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Float64Array",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -917,12 +919,11 @@
   {
     "__docId__": 58,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Map",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -930,12 +931,11 @@
   {
     "__docId__": 59,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Set",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -943,12 +943,11 @@
   {
     "__docId__": 60,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "WeakMap",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -956,12 +955,11 @@
   {
     "__docId__": 61,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "WeakSet",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -969,12 +967,11 @@
   {
     "__docId__": 62,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "ArrayBuffer",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -982,12 +979,11 @@
   {
     "__docId__": 63,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "DataView",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -995,12 +991,11 @@
   {
     "__docId__": 64,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "JSON",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1008,12 +1003,11 @@
   {
     "__docId__": 65,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Promise",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1021,12 +1015,11 @@
   {
     "__docId__": 66,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Generator",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1034,12 +1027,11 @@
   {
     "__docId__": 67,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "GeneratorFunction",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1047,12 +1039,11 @@
   {
     "__docId__": 68,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Reflect",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1060,38 +1051,36 @@
   {
     "__docId__": 69,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Proxy",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
     "memberof": "BuiltinExternal/ECMAScriptExternal.js",
-    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
     "access": null,
     "description": "",
     "builtinExternal": true
   },
   {
-    "__docId__": 71,
+    "__docId__": 70,
     "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
     "static": true,
-    "variation": null,
-    "name": "CanvasRenderingContext2D",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
-    "memberof": "BuiltinExternal/WebAPIExternal.js",
-    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
     "access": null,
     "description": "",
+    "lineNumber": 193,
     "builtinExternal": true
   },
   {
     "__docId__": 72,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "DocumentFragment",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
     "memberof": "BuiltinExternal/WebAPIExternal.js",
-    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1099,12 +1088,11 @@
   {
     "__docId__": 73,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Element",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
     "memberof": "BuiltinExternal/WebAPIExternal.js",
-    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1112,12 +1100,11 @@
   {
     "__docId__": 74,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Event",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
     "memberof": "BuiltinExternal/WebAPIExternal.js",
-    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1125,12 +1112,11 @@
   {
     "__docId__": 75,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "Node",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
     "memberof": "BuiltinExternal/WebAPIExternal.js",
-    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1138,12 +1124,11 @@
   {
     "__docId__": 76,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "NodeList",
-    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
     "memberof": "BuiltinExternal/WebAPIExternal.js",
-    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1151,12 +1136,11 @@
   {
     "__docId__": 77,
     "kind": "external",
-    "static": true,
-    "variation": null,
-    "name": "XMLHttpRequest",
-    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
     "memberof": "BuiltinExternal/WebAPIExternal.js",
-    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
     "access": null,
     "description": "",
     "builtinExternal": true
@@ -1164,14 +1148,26 @@
   {
     "__docId__": 78,
     "kind": "external",
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
     "static": true,
-    "variation": null,
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "external",
     "name": "AudioContext",
     "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
     "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
     "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
     "access": null,
     "description": "",
+    "lineNumber": 34,
     "builtinExternal": true
   }
 ]
