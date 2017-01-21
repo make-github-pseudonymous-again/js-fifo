@@ -1,8 +1,21 @@
-[js-fifo](http://aureooms.github.io/js-fifo)
+[@aureooms/js-fifo](https://aureooms.github.io/js-fifo)
 ==
 
-_**F**irst **I**n, **F**irst **O**ut_ data structures for JavaScript. Parent is
-[aureooms/js-data-structures](https://github.com/aureooms/js-data-structures).
+<img src="https://cdn.rawgit.com/aureooms/js-fingertree/master/media/sketch.svg" width="864">
+
+First In, First Out data structures for JavaScript.
+See [docs](https://aureooms.github.io/js-fifo).
+Parent is [@aureooms/js-data-structures](https://github.com/aureooms/js-data-structures).
+
+```js
+queue.push( 1 ) ;
+queue.push( 2 ) ;
+queue.push( 3 ) ;
+queue.shift( ) ; // 1
+queue.shift( ) ; // 2
+queue.shift( ) ; // 3
+```
+
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-fifo.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-fifo/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-js-fifo.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-fifo)
