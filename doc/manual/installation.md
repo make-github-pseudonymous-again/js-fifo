@@ -4,10 +4,10 @@ or [npm](https://github.com/npm/npm).
 
 ### jspm
 ```terminal
-jspm install npm:aureooms-js-fifo
+jspm install npm:@aureooms/js-fifo
 ```
 
 ### npm
 ```terminal
-npm install aureooms-js-fifo --save
+npm install @aureooms/js-fifo --save
 ```
