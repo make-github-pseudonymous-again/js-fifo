@@ -1,10 +1,10 @@
-[@aureooms/js-fifo](https://aureooms.github.io/js-fifo)
+[@aureooms/js-fifo](https://make-github-pseudonymous-again.github.io/js-fifo)
 ==
 
 <img src="https://cdn.rawgit.com/aureooms/js-fifo/master/media/sketch.svg" width="864">
 
 First In, First Out data structures for JavaScript.
-See [docs](https://aureooms.github.io/js-fifo).
+See [docs](https://make-github-pseudonymous-again.github.io/js-fifo).
 Parent is [@aureooms/js-data-structures](https://github.com/aureooms/js-data-structures).
 
 ```js
@@ -29,5 +29,5 @@ queue.shift( ) ; // 3
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-fifo.svg)](https://codeclimate.com/github/aureooms/js-fifo/trends/churn)
 [![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-fifo/master.svg)](https://codecov.io/gh/aureooms/js-fifo)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-fifo.svg)](https://codeclimate.com/github/aureooms/js-fifo/trends/technical_debt)
-[![Documentation](https://aureooms.github.io/js-fifo/badge.svg)](https://aureooms.github.io/js-fifo/source.html)
+[![Documentation](https://make-github-pseudonymous-again.github.io/js-fifo/badge.svg)](https://make-github-pseudonymous-again.github.io/js-fifo/source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-fifo)](https://bundlephobia.com/result?p=@aureooms/js-fifo)
