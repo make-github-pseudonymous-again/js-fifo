@@ -25,7 +25,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/aureooms/js-fifo/issues"
+    "url": "https://github.com/make-github-pseudonymous-again/js-fifo/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -63,7 +63,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aureooms/js-fifo.git"
+    "url": "https://github.com/make-github-pseudonymous-again/js-fifo.git"
   },
   "scripts": {
     "build": "rm -rf lib && babel src -d lib",
